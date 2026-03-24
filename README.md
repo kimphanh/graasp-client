@@ -30,6 +30,8 @@ You will need `pnpm`. Refer to the [Getting started documentation for developers
 For reference, here are all the environment variables that you can use to override the behavior of the app.
 In development none of them should be required. But some checks might require them.
 
+hello
+
 ```sh
 # .env.development
 VITE_VERSION=local
