@@ -96,6 +96,8 @@ export function AuthProvider({
     [useLogin],
   );
 
+  console.log('Current member in AuthContext', currentMember);
+
   useEffect(() => {
     if (currentMember) {
       LocalStorage.setItem(
