@@ -131,6 +131,15 @@ function ThemeWrapper({ children }: Readonly<ThemeWrapperProps>) {
 }
 
 function App() {
+const day = "hello";
+  switch (day) {
+  case "MONDAY":
+  case "TUESDAY":
+  "WEDNESDAY":   // instead of "case WEDNESDAY"
+    doSomething();
+    break;
+}
+  
   return (
     <HelmetProvider>
       <QueryClientProvider client={queryClient}>
