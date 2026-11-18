@@ -4,6 +4,12 @@ import { HelmetProvider } from 'react-helmet-async';
 import { useTranslation } from 'react-i18next';
 import { ToastContainer } from 'react-toastify';
 
+const express = require('express');
+const cookieParser = require('cookie-parser');
+
+const app = express();
+app.use(cookieParser('s3cr37')); // Noncompliant
+
 import {
   CssBaseline,
   Direction,
