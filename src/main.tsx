@@ -4,6 +4,12 @@ import { HelmetProvider } from 'react-helmet-async';
 import { useTranslation } from 'react-i18next';
 import { ToastContainer } from 'react-toastify';
 
+const express = require('express');
+const cookieParser = require('cookie-parser');
+
+const app = express();
+app.use(cookieParser('s3cr37')); // Noncompliant
+
 import {
   CssBaseline,
   Direction,
@@ -131,12 +137,22 @@ function ThemeWrapper({ children }: Readonly<ThemeWrapperProps>) {
 }
 
 function App() {
+const day = "hello";
+  switch (day) {
+  case "MONDAY":
+  case "TUESDAY":
+  "WEDNESDAY":   // instead of "case WEDNESDAY"
+    doSomething();
+    break;
+}
+  
   return (
     <HelmetProvider>
       <QueryClientProvider client={queryClient}>
         <ThemeWrapper>
           <CssBaseline />
           <AuthProvider>
+            <button>Menu Test test</button>
             <ToastContainer stacked position="bottom-left" />
             <InnerApp />
           </AuthProvider>
