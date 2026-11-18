@@ -137,7 +137,7 @@ function App() {
         <ThemeWrapper>
           <CssBaseline />
           <AuthProvider>
-            <button>Menu Test</button>
+            <button>Menu Test test</button>
             <ToastContainer stacked position="bottom-left" />
             <InnerApp />
           </AuthProvider>
